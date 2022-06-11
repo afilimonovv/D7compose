@@ -3,7 +3,7 @@ services:
   maven:
     image: maven:3.6-alpine
     volumes:
-      - war:/war
+      - ./war:/war
     command: > 
       /bin/bash -c "apk update \
       && apk add git \
