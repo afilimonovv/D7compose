@@ -13,8 +13,7 @@ services:
   tomcat:
     image:tomcat:9.0.63-jre-openjdk-slim-buster
     depends_on:
-      maven:
-        condition:service_completed_successfully
+      - maven
       volumes:
         -./war:/usr/local/tomcat/webapps
       ports:
