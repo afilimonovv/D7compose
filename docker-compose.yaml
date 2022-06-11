@@ -3,7 +3,7 @@ services:
   maven:
     image: maven:3.6-alpine
     volumes:
-      - ./war:/war/
+      - war:/war
     command: > 
       /bin/bash -c "apk update \
       && apk add git \
@@ -13,7 +13,7 @@ services:
   tomcat:
     image: tomcat:9.0.63-jre8-openjdk-slim-buster
     volumes:
-      - ./war:/usr/local/tomcat/webapps
+      - war:/usr/local/tomcat/webapps
     ports:
       - 8888:8080
     depends_on:
