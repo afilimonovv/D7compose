@@ -16,7 +16,7 @@ services:
       maven:
         condition:service_completred_successfully
       volumes:
-        -war:/usr/local/tomcat/webapps
+        -./war:/usr/local/tomcat/webapps
       ports:
         - 8888:8080
 
