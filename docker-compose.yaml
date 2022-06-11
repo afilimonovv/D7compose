@@ -14,10 +14,10 @@ services:
     image:tomcat:9.0.63-jre-openjdk-slim-buster
     depends_on:
       - maven
-      volumes:
-        -./war:/usr/local/tomcat/webapps
-      ports:
-        - 8888:8080
+    volumes:
+      -./war:/usr/local/tomcat/webapps
+    ports:
+      - 8888:8080
 
 volumes:
   war:
