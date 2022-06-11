@@ -11,4 +11,4 @@ services:
       && mvn -f /git/pom.xml package \
       && cp /git/target/*.war /war/"
 volumes:
-  war
+  war:
