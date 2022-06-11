@@ -12,14 +12,14 @@ services:
       && cp /git/target/*.war /war/"
   tomcat:
     image:tomcat:9.0.63-jre8-openjdk-slim-buster
-    depends_on:
-      - maven
     volumes:
       -type: volume
       source: /war
       target: /usr/local/tomcat/webapps
     ports:
       - 8888:8080
+    depends_on:
+      - maven
 
 volumes:
   war:
