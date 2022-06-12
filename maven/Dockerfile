@@ -1,10 +1,10 @@
 FROM maven:3.6-alpine
-WORKDIR /tmp/
+WORKDIR ,/war
 CMD ["apk update \
     && apk add git \
     && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git git \
-    && mvn -f /git/pom.xml package \
-    && cp ./git/target/*.war /tmp"]
+    && mvn package \
+    && cp ./git/target/*.war ./war"]
 
 
 
