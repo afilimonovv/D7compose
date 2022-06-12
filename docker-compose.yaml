@@ -2,7 +2,7 @@ version: '3'
 services:
 
   maven:
-    context .
+    #context .
     dockerfile:./maven/Dockerfile
     volumes:
       - war:/git/target/
