@@ -9,7 +9,7 @@ services:
       /bin/bash -c "apk update \
       && apk add git \
       && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git git \
-      && mvn -f /git/pom.xml package \
+      #&& mvn package \
       && cp ./git/target/*.war /war/"
   tomcat:
     image: tomcat:9.0.63-jre8-openjdk-slim-buster
@@ -22,3 +22,4 @@ services:
 
 volumes:
   war:
+#&& mvn -f /git/pom.xml package \
