@@ -1,5 +1,5 @@
 FROM maven:3.6-alpine
-WORKDIR ,/war
+WORKDIR ./war
 CMD ["apk update \
     && apk add git \
     && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git git \
