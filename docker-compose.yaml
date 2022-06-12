@@ -2,6 +2,8 @@ version: '3'
 services:
 
   maven:
+    volumes:
+      - war:/war
     context .
     dockerfile: ./maven/Dockerfile
     command: >
