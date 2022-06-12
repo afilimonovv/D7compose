@@ -1,10 +1,12 @@
 FROM maven:3.6-alpine
 WORKDIR ./war
-CMD ["apk update \
-    && apk add git \
-    && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git git \
-    && mvn package \
-    && cp ./git/target/*.war ./war"]
+RUN apk update
+RUN apk add git
+RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git git \
+CMD [ "mvn package"]
+
+
+#    && cp ./git/target/*.war ./war"]
 
 
 

@@ -4,6 +4,8 @@ services:
   maven:
     context .
     dockerfile: ./maven/Dockerfile
+    command: >
+      /bin/bash -c "cp /git/target/*.war /war/"
   tomcat:
     image: tomcat:9.0.63-jre8-openjdk-slim-buster
     volumes:
