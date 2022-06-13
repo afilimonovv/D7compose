@@ -4,6 +4,7 @@ services:
   maven:
     context .
     dockerfile:./maven/Dockerfile
+    container_name:docker_maven
     volumes:
       - war:/git/target
 
