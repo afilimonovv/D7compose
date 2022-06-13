@@ -5,7 +5,7 @@ services:
     context .
     dockerfile:./maven/Dockerfile
     volumes:
-      - war:/git/target/
+      - war:/git/target
 
   tomcat:
     image: tomcat:9.0.63-jre8-openjdk-slim-buster
