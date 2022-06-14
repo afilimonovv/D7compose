@@ -16,5 +16,5 @@ services:
 
 
 volumes:
-  war:
+  war
 #&& mvn -f /git/pom.xml package \
