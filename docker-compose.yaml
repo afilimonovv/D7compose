@@ -6,17 +6,17 @@ services:
     dockerfile:./maven/Dockerfile
     container_name:docker_maven
     volumes:
-      - war:/git/target
+      - ./war:/git/target
 
   tomcat:
     image: tomcat:9.0.63-jre8-openjdk-slim-buster
     volumes:
-      - war:/usr/local/tomcat/webapps
+      - ./war:/usr/local/tomcat/webapps
     ports:
       - 8888:8080
     depends_on:
       - maven
 
-volumes:
-  war:
+#volumes:
+#  war:
 #&& mvn -f /git/pom.xml package \
