@@ -2,8 +2,10 @@ version: '3'
 services:
 
   maven:
-    context .
+    image: maven:3.6-alpine
     dockerfile: ./maven/Dockerfile
+    volumes:
+      - ./war:/war
   tomcat:
     image: tomcat:9.0.63-jre8-openjdk-slim-buster
     volumes:
