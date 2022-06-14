@@ -3,8 +3,11 @@ WORKDIR /war
 RUN apk update
 RUN apk add git
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git git
-CMD ["mvn",  "-f",  "/git/pom.xml package" ]
-RUN cp ./git/target/*.war /war/"]
+CMD ["mvn",  "-f",  "/git/pom.xml", "package" ]
+
+
+
+#RUN cp ./git/target/*.war /war/"]
 
 
 
