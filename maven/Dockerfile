@@ -4,6 +4,8 @@ WORKDIR /war/
 RUN apk update
 RUN apk add git
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git git
+RUN apt install default-jdk -y
+RUN apt install maven -y
 RUN mvn package
 CMD ["cp", "./git/target/hello-1.0.war /war/"]
 
