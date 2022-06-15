@@ -4,11 +4,11 @@ services:
   maven:
     build: maven/
     volumes:
-      - war:/war/
+      - war:/war
   tomcat:
     image: tomcat:9.0.63-jre8-openjdk-slim-buster
     volumes:
-      - war:/usr/local/tomcat/webapps/
+      - war:/usr/local/tomcat/webapps
     ports:
       - 8888:8080
     depends_on:
